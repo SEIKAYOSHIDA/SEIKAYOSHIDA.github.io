@@ -23,7 +23,19 @@
     <script src="assets/js/jquery.min.js"></script>
 
 
-	<script type="text/javascript" src="assets/js/modernizr.custom.js"></script>
+  <!-- リンクを押したらスーッと動く -->
+    <script type="text/javascript" src="assets/js/modernizr.custom.js">
+    $(function(){
+        $('a[href^=#]').click(function(){
+            var speed = 500;
+            var href= $(this).attr("href");
+            var target = $(href == "#" || href == "" ? 'html' : href);
+            var position = target.offset().top;
+            $("html, body").animate({scrollTop:position}, speed, "swing");
+            return false;
+        });
+    });
+    </script>
 
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
