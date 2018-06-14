@@ -25,20 +25,6 @@
 
 	<script type="text/javascript" src="assets/js/modernizr.custom.js"></script>
 
-<!-- リンクを押したらスーッと動くようにしたいけれどわからない -->
-  <script type="text/javascript">
-  $(function(){
-      $('a[href^=#]').click(function(){
-          var speed = 500;
-          var href= $(this).attr("href");
-          var target = $(href == "#" || href == "" ? 'html' : href);
-          var position = target.offset().top;
-          $("html, body").animate({scrollTop:position}, speed, "swing");
-          return false;
-      });
-  });
-  </script>
-
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -60,11 +46,11 @@
         </div>
         <div class="navbar-collapse collapse" id="navbar-collapse">
           <ul class="nav navbar-nav">
-            <li> <a href="#top">Home</a></li>
+            <li> <a href="#top"> Home</a></li>
 			      <li> <a href="#about"> About</a></li>
 			      <li> <a href="#will"> Will</a></li>
-            <li> <a href="https://seikayoshida.github.io/#portfolio"> Portfolio</a></li>
-			      <li> <a href="https://seikayoshida.github.io/#contact"> Contact</a></li>
+            <li> <a href="#portfolio"> Portfolio</a></li>
+			      <li> <a href="#contact"> Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
