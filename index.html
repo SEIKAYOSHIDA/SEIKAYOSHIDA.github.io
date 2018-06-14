@@ -21,7 +21,24 @@
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
 
     <script src="assets/js/jquery.min.js"></script>
+
+
 	<script type="text/javascript" src="assets/js/modernizr.custom.js"></script>
+
+
+  <script type="text/javascript">
+  $(function(){
+      $('a[href^=#]').click(function(){
+          var speed = 500;
+          var href= $(this).attr("href");
+          var target = $(href == "#" || href == "" ? 'html' : href);
+          var position = target.offset().top;
+          $("html, body").animate({scrollTop:position}, speed, "swing");
+          return false;
+      });
+  });
+  </script>
+
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -31,7 +48,6 @@
   </head>
 
   <body data-spy="scroll" data-offset="0" data-target="#navbar-main">
-
 
       <!-- Fixed navbar -->
     <nav class="navbar navbar-inverse navbar-fixed-top" id="navbar-main">
@@ -52,7 +68,7 @@
           </ul>
         </div><!--/.nav-collapse -->
       </div>
-  </nav>
+    </nav>
 
  </body>
 
